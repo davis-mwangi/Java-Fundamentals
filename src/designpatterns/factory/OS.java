@@ -1,2 +1,5 @@
-package designpatterns.factory;public interface OS {
+package designpatterns.factory;
+
+public interface OS {
+     void spec();
 }

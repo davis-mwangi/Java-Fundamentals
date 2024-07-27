@@ -1,16 +1,17 @@
 package designpatterns.singleton;
 //Thread safe
-public class SingletonSynchronized {
-     private  static  SingletonSynchronized instance;
+public class SingletonMethodSynchronized {
+     private  static SingletonMethodSynchronized instance;
 
-     private  SingletonSynchronized(){
+     private SingletonMethodSynchronized(){
 
      }
 
-     public  static synchronized SingletonSynchronized getInstance(){
+     //Method synchronized for read - Two threads cannot access the method at the same time
+     public  static synchronized SingletonMethodSynchronized getInstance(){
          //Only one thread can access  here
          if(instance == null){
-             instance = new SingletonSynchronized();
+             instance = new SingletonMethodSynchronized();
          }
          return  instance;
      }
